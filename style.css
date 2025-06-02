@@ -1,0 +1,288 @@
+/* style.css */
+
+/* 4. Form Submit Button Fix */
+form button[type="submit"] {
+  background-color: #002c5f;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #001d3d;
+}
+
+/* 5. Optional: Input & Textarea Focus Ring Matching */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #002c5f;
+  box-shadow: 0 0 0 3px rgba(0, 44, 95, 0.2);
+}
+
+
+
+body.page-bg {
+  background-color: #e6f2ff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(4rem, 10vw, 7rem); /* scales between 4rem and 7rem */
+  background-color: #e6f2ff;
+  transition: background-color 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logo styles */
+.logo {
+  height: clamp(3.5rem, 8vw, 6rem); /* scales between 3.5rem and 6rem */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Scrolled state */
+.header.scrolled {
+  padding-top: 3%;
+  background-color: white;
+  z-index: 1000;
+}
+
+.header.scrolled .logo {
+  transform: scale(0.9) translateY(-10px);
+}
+
+/* MAIN CONTENT */
+.main-content {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6; 
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Home Section Grid */
+    .highlight {
+      font-weight: bold;
+      color: #d00000;
+    }
+
+
+/* Centered Full-Width Heading */
+.home-data h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #002c5f;
+  margin-bottom: 2rem;
+}
+
+.home-data p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.home-grid {
+  padding: 4rem 1.5rem;
+  opacity: 1;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+}
+
+.home-grid h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #002855;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.home-grid p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Tracker Section Styles */
+.tracker-section {
+  background: #f9f9fb;
+  opacity: 1;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 1rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 900px) {
+  .tracker-section {
+    padding: 1.5rem 6rem;
+  }
+}
+
+.tracker-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #002c5f;
+  margin-bottom: 1rem;
+}
+
+/* Add donation animation */
+.animate-pulse-slow {
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.10);
+  }
+}
+
+/* Pint and Lives Animation */
+.pint-lives-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+
+  .animate-pop {
+    animation: pop 0.3s ease;
+  }
+
+
+/* Info Cards Section */
+.info-cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 1rem;
+  /* background-color: #f8fbff; */
+}
+
+/* Each Card */
+.info-card {
+  background: #f8fbff;
+  opacity: 1;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #f2e9f0;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  padding: 2rem;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+}
+
+.info-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  justify-self: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-card h1 {
+  font-size: 1.5rem;
+  color: #002c5f;
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 30px 20px 15px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffb347;
+  transform: scale(1.2);
+}
+
+.footer-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+

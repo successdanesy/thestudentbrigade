@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Students Brigade</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
+
+   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media-queries.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-bg">
+
+  <!-- HEADER SECTION -->
+  <header class="header">
+    <img src="img/logo.png" alt="Students Brigade Logo" class="logo">
+  </header>
+
+  <main class="main-content">
+        <div class="home-data">
+        <h1><i class="fas fa-heartbeat mr-2 text-[#CD1C18]"></i>Fostering Optimal Health</h1>
+        <p>Join the Students Brigade as we embark on a life-saving mission — one drop at a time.</p>
+        </div>
+
+  <section class="home-grid py-16 px-6" id="home">
+  <h1 class="text-4xl md:text-5xl font-bold text-[#002855] text-center md:text-left mb-8 max-w-4xl mx-auto">
+    About the Students Brigade
+  </h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
+    <div class="home-paragraphs text-lg text-gray-700 leading-relaxed">
+      <p>
+        The <span class="font-semibold" style="color: #002c5f;">Students Brigade</span> is a student-led organization committed to
+        meeting the medical needs of our community in every way we can.
+        <br><br>
+        Our first mission: a Blood Drive to support patients in Georgia battling with hematologic conditions — 
+        in honor of <span class="highlight text-[#002855] font-medium">World Blood Donor Day on June 14th.</span>
+      </p>
+    </div>
+
+    <div>
+      <img src="img/Health professional team-amico.png" alt="Medical Team" class="w-full max-w-md mx-auto md:mx-0">
+    </div>
+  </div>
+</section>
+
+
+    <!-- TRACKER SECTION -->
+<section class="tracker-section px-6 text-center bg-white rounded-xl shadow-lg">
+
+  <!-- Heading -->
+  <h2 class="text-3xl sm:text-3xl font-bold text-[#002c5f] mb-6">
+    Track Our Blood Drive
+  </h2>
+
+  <!-- DONATION CONTROLS + STATS CONTAINER -->
+  <div class="donation-controls mb-6">
+    
+    <!-- RBD Button + Reset -->
+    <div class="flex flex-col items-center justify-center mb-4">
+      <img
+        id="rbdButton"
+        src="img/icons8-blood-100.png"
+        alt="Donate Blood Drop"
+        class="w-16 h-16 animate-pulse-slow cursor-pointer"
+      />
+
+      <!-- Reset Button -->
+      <button
+        id="resetButton"
+        class="mt-2 px-3 py-1 border text-xs font-medium rounded-full text-[#1d3557] border-[#1d3557] hover:bg-[#edf6f9] transition"
+       style="border-color:#1d3557; color:#1d3557; cursor:pointer; transition: background-color 0.3s ease;"
+        >
+        − Remove Donation
+      </button>
+    </div>
+
+<!-- STATS SECTION -->
+<div class="grid grid-cols-2 gap-4 max-w-xs sm:max-w-md mx-auto px-4" style="color:#002c5f;">
+  <!-- Pints Donated -->
+  <div class="bg-[#fef2f2] p-4 rounded text-center">
+    <h3 class="text-sm sm:text-base font-medium mb-1">Pints Donated</h3>
+    <p id="pintsDisplay" class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-1" style="color:#e63946;">
+      <i class="fas fa-tint"></i> 0
+    </p>
+  </div>
+
+  <!-- Lives Saved -->
+  <div class="bg-[#edf6f9] p-4 rounded text-center">
+    <h3 class="text-sm sm:text-base font-medium mb-1">Lives Saved</h3>
+    <p id="livesDisplay" class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-1" style="color:#e63946;">
+      <i class="fas fa-heartbeat"></i> 0
+    </p>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+
+    <section class="py-12 px-4 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-10" style="color: #002c5f;">
+    <i class="fas fa-bullseye mr-2" style="color: #002c5f;"></i> Our Goal
+  </h2>
+
+  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- Card 1 -->
+    <div class="bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition">
+      <div class="text-4xl mb-3" style="color: #002c5f;">
+        <i class="fas fa-heartbeat"></i>
+      </div>
+      <h3 class="text-2xl font-bold" style="color: #002c5f;">100+</h3>
+      <p style="color: #002c5f;">Lives to be Saved</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition">
+      <div class="text-4xl mb-3" style="color: #002c5f;">
+        <i class="fas fa-tint"></i>
+      </div>
+      <h3 class="text-2xl font-bold" style="color: #002c5f;">34+</h3>
+      <p style="color: #002c5f;">Pints Needed</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition">
+      <div class="text-4xl mb-3" style="color: #002c5f;">
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+      <h3 class="text-2xl font-bold" style="color: #002c5f;">5 Days</h3>
+      <p style="color: #002c5f;">Of Donation</p>
+    </div>
+
+  </div>
+</section>
+
+      <!-- CALL TO ACTION SECTION -->
+<section class="info-cards-section">
+    <!-- Card 1 -->
+    <div class="info-card">
+      <img src="img/Blood donation-amico.svg" alt="Donate" class="info-svg" />
+      <h1>Ready to donate?</h1>
+      <p>Join our Life-Saving Mission now from June 9th to 13th.</p>
+    </div>
+  
+    <!-- Card 2 -->
+    <div class="info-card">
+      <img src="img/Paper map-cuate.svg" alt="Location" class="info-svg" />
+      <h1>Where to find us?</h1>
+      <p>📍 Ljubljana Street 13, Georgia<br>🕙 10AM – 4PM, June 9–13</p>
+    </div>
+  </section>
+
+
+  <section class="bg-white py-16 px-4 text-center">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4" style="color: #002c5f;"> Sign up. Show up. Save a life.</h2>
+    <p class="text-lg mb-4 text-[#002c5f]">
+      It’s more than just donating — it’s about coming together as a community, showing up for others, and making a real difference from day one. 💪🏾
+    </p>
+    <p class="text-sm mb-6" style="color: #157359;">
+      #BloodDrive2025 #BeTheDifference #LifeInEveryDrop #GiveHope
+    </p>
+    <p class="text-lg text-[#002c5f] mb-6">
+      Have questions or want to get involved? Reach out to us on Instagram.
+    </p>
+   <a
+    href="https://instagram.com/thestudentbrigade"
+    target="_blank"
+    style="
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #0b3158;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    "
+  >
+    <i class="fab fa-instagram"></i>
+    @thestudentsbrigade
+  </a>
+  </div>
+</section>
+
+
+<section class="bg-[#f0f4f8] py-16 px-6 md:px-20 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #002c5f;">Partner with Us</h2>
+  <p class="text-[#002c5f] max-w-2xl mx-auto text-lg mb-10">
+    Are you passionate about saving lives and supporting student-led initiatives?
+    Sponsor the Students Brigade and make an impact today. Fill out the form below and we’ll get in touch!
+  </p>
+
+  <form
+    action="https://formspree.io/f/your-form-id"
+    method="POST"
+    class="max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6 space-y-4"
+  >
+    <div>
+      <label class="block text-left text-sm font-semibold mb-1"  style="color: #002c5f;">Your Name</label>
+      <input
+        type="text"
+        name="name"
+        required
+        class="w-full px-4 py-2 border border-[#ccd6dd] rounded-md focus:outline-none focus:ring-2 focus:ring-[#002c5f]"
+      />
+    </div>
+
+    <div>
+      <label class="block text-left text-sm font-semibold mb-1" style="color: #002c5f;">Email Address</label>
+      <input
+        type="email"
+        name="email"
+        required
+        class="w-full px-4 py-2 border border-[#ccd6dd] rounded-md focus:outline-none focus:ring-2 focus:ring-[#002c5f]"
+      />
+    </div>
+
+    <div>
+      <label class="block text-left text-sm font-semibold text-[#002c5f] mb-1" style="color: #002c5f;">Message / Sponsorship Interest</label>
+      <textarea
+        name="message"
+        rows="4"
+        required
+        class="w-full px-4 py-2 border border-[#ccd6dd] rounded-md focus:outline-none focus:ring-2 focus:ring-[#002c5f]"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full text-white font-semibold py-2 px-4 rounded-md hover:bg-[#001e40] transition duration-300"
+    >
+      Send Message
+    </button>
+  </form>
+</section>
+
+
+
+  </main>
+  <!--Beginning of Footer-->
+<footer class="footer">
+  <div class="footer-content">
+      <p>Developed by <strong>Success Chukwuemeka</strong>. <br> Let's connect:</p>
+      <div class="social-icons">
+          <a href="mailto:successdanesy@gmail.com?subject=Inquiry%20about%20your%20services" title="Email">
+              <i class="fa fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/success-chu?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" title="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/successdanesy" target="_blank" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://wa.me/2347088193394?text=Hello%2C%20I%27m%20interested%20in%20your%20services" target="_blank" title="Whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+          </a>
+      </div>
+  </div>
+  <p class="footer-note">© 2025 Success Chukwuemeka. All rights reserved.</p>
+</footer>
+<!--End of Footer-->
+
+<script src="script.js"></script>
+</body>
+</html>
