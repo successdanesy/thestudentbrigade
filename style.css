@@ -67,7 +67,7 @@ body {
   }
 
   .nav-link {
-    color: #002c5f;
+    background: linear-gradient(135deg, #002c5f, #0056b3);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -115,35 +115,36 @@ body {
   }
 
   /* Mobile Menu Styles */
-  .mobile-menu-button {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 0.5rem;
-    border: none;
-    background: none;
-    gap: 4px;
-  }
+.mobile-menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
 
-  .hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: #002c5f;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-  }
+.hamburger-line {
+  height: 3px;
+  width: 100%;
+  background-color: #002c5f;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
 
-  .mobile-menu-button.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 7px);
-  }
+.mobile-menu-button.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 5px);
+}
 
-  .mobile-menu-button.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
+.mobile-menu-button.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
 
-  .mobile-menu-button.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-  }
+.mobile-menu-button.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -5px);
+}
+
 
   .mobile-menu {
     display: none;
@@ -151,7 +152,7 @@ body {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 50%, #ffffff 100%);
     backdrop-filter: blur(20px);
     border-top: 1px solid rgba(0, 44, 95, 0.1);
     padding: 1rem;
@@ -166,7 +167,7 @@ body {
   .mobile-nav-links {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -176,7 +177,7 @@ body {
   .mobile-nav-link {
     color: #002c5f;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
     padding: 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -189,7 +190,8 @@ body {
   }
 
   .mobile-cta {
-    margin-top: 1rem;
+    margin: 1rem 1rem 0;
+    padding: 0.5rem 1.5rem;
     text-align: center;
   }
 
