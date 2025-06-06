@@ -44,6 +44,32 @@
       display: none;
     }
 
+    .dashboard-section {
+      padding: 2rem;
+    }
+
+    .dashboard-title {
+      font-size: 3rem;
+    }
+
+    .dashboard-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .dashboard-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .card-icon {
+      width: 80px;
+      height: 80px;
+      font-size: 2rem;
+    }
+
+    .card-number {
+      font-size: 3rem;
+    }
+
 
   }
 
@@ -112,28 +138,31 @@
       display: none;
     }
 
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+    .dashboard-section {
+        padding: 2rem 1rem;
+      }
 
-    .tracker-content h2 {
-        font-size: 1.5rem;
-    }
+      .dashboard-title {
+        font-size: 2.5rem;
+      }
 
-    .tracker-section {
-        padding: 4rem 1rem;
-        margin: 1rem;
-    }
-
-    .stats-item {
-        padding: 2rem;
-        font-size: 1.2rem;
-    }
-
-    .stat-label {
+      .dashboard-subtitle {
         font-size: 1rem;
-        font-weight: bold;
-    }
+      }
+
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+
+      .card-number {
+        font-size: 2.5rem;
+      }
 
     .goals-section {
         padding: 4rem 1rem;
@@ -288,24 +317,23 @@
       display: none;
     }
 
-    .tracker-content h2 {
-        font-size: 1.5rem;
-    }
-    .tracker-section {
-        padding: 2rem 1rem;
-        margin: 0.5rem;
-    }
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .stat-label {
-        font-size: 0.8rem;
-        font-weight: bold;
-    }
-    .stats-item {
-        padding: 1rem;
+    .dashboard-title {
+        font-size: 2rem;
+      }
+
+      .dashboard-subtitle {
         font-size: 0.9rem;
-    }
+      }
+
+      .card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+      }
+
+      .card-number {
+        font-size: 2rem;
+      }
 
     .goal-grid {
         gap: 1rem;
