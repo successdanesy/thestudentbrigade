@@ -67,7 +67,7 @@ body {
   }
 
   .nav-link {
-    background: linear-gradient(135deg, #002c5f, #0056b3);
+    color: #002c5f;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -116,7 +116,7 @@ body {
 
   /* Mobile Menu Styles */
 .mobile-menu-button {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 6px;
