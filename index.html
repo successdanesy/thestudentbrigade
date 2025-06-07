@@ -227,7 +227,14 @@
         <div class="card-label">Lives Potentially Saved</div>
         <div class="card-description">Based on medical estimates</div>
       </div>
-    </div>   
+    </div> 
+
+<div id="lastUpdated" style="text-align:center; margin-top: 1rem; font-size: 0.9rem; color: #444;">
+  <!-- This will be updated by JS -->
+</div>
+
+
+    
     </div>
 
     <div class="update-info">
@@ -352,6 +359,71 @@
   </div>
 </footer>
 <!--End of Footer-->
+
+<script>
+  async function fetchLiveStats() {
+    const API_URL = "https://students-bridage-backend.onrender.com/api/counts";
+
+    try {
+      const response = await fetch(API_URL);
+      const data = await response.json();
+
+      // Log for debugging
+      console.log("📊 Live Data Fetched:", data);
+
+      const pintsSpan = document.querySelector('#pintsCount span');
+      const livesSpan = document.querySelector('#livesCount span');
+
+      // Safety check
+      if (pintsSpan && livesSpan) {
+        pintsSpan.textContent = data.pints;
+        livesSpan.textContent = data.lives;
+
+        // Optional: remove spinner
+        document.querySelectorAll('.card-number').forEach(el => {
+          const spinner = el.querySelector('i.fa-sync-alt');
+          if (spinner) spinner.remove();
+        });
+      }
+    } catch (err) {
+      console.error("❌ Failed to fetch tracker data:", err);
+      document.querySelector('#pintsCount span').textContent = '—';
+      document.querySelector('#livesCount span').textContent = '—';
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", fetchLiveStats);
+
+  function formatTime(date) {
+  return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+
+function updateLastUpdatedText() {
+  const now = new Date();
+  const formattedTime = formatTime(now);
+  const lastUpdatedEl = document.getElementById("lastUpdated");
+  lastUpdatedEl.textContent = `Last updated at ${formattedTime}. Refresh the page to get the latest data.`;
+}
+updateLastUpdatedText();
+then(data => {
+  // ... your animateNumber logic here ...
+  updateDashboard(data);
+  updateLastUpdatedText();
+})
+  .catch(err => {
+    console.error("❌ Error updating dashboard:", err);
+    document.querySelector('#pintsCount span').textContent = '—';
+    document.querySelector('#livesCount span').textContent = '—';
+  });
+
+  // Update every 10 seconds
+  setInterval(() => {
+    fetchLiveStats();
+    updateLastUpdatedText();
+  }, 10000);
+</script>
+
+
 
   </body>
 <script src="script.js"></script>
