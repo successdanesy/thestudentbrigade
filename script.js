@@ -64,7 +64,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         // API call to fetch data from the functional tracker
 async function fetchBloodDriveData() {
   try {
-    const response = await fetch("https://students-bridage.onrender.com/api/counts");
+    const response = await fetch("https://students-bridage-backend.onrender.com/api/counts");
     const data = await response.json();
     return {
       pints: data.pints || 0,
