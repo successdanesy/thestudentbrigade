@@ -4,6 +4,9 @@ A real-time blood donation dashboard built for The Students Brigade to track pin
 
 ## 🔍 Overview
 
+### 🔹 Public Dashboard (thestudentbrigade.vercel.app)
+<img src="assets/dashboard-view.png" alt="Public dashboard view" width="100%"/>
+
 This project has two core versions:
 
 1. **Functional Tracker**:  
