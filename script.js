@@ -57,3 +57,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const pintsEl = document.getElementById("pintsCount");
+    const livesEl = document.getElementById("livesCount");
+
+    const pintsSpan = pintsEl.querySelector('span');
+    const livesSpan = livesEl.querySelector('span');
+
+    // Show spans first (but still invisible due to opacity 0)
+    pintsSpan.style.display = "inline";
+    livesSpan.style.display = "inline";
+
+    // Force reflow (ensures transition triggers)
+    void pintsSpan.offsetWidth;
+    void livesSpan.offsetWidth;
+
+    // Fade in
+    pintsSpan.style.opacity = 1;
+    livesSpan.style.opacity = 1;
+
+    // Remove spinner icons
+    pintsEl.querySelector('i').remove();
+    livesEl.querySelector('i').remove();
+
+    // Optionally remove loading class
+    pintsEl.classList.remove('loading-animation');
+    livesEl.classList.remove('loading-animation');
+  }, 10000); // 10 seconds
+});
